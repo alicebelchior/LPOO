@@ -1,18 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package revisao;
 
-/**
- *
- * @author alicebelchior
- */
 public class revisao4 {
 
-    /**
-     * @param args the command line arguments
-     */
+    /*
+    Faça um programa que leia o número e o peso de um boi, a leitura encerra quando o número digitado for 0 (zero) e informe:
+	Quantos bois foram digitados;
+	Qual o total de peso dos bois;
+	Qual a média de peso dos bois;
+	Qual o número e o peso do boi mais pesado; e
+	Qual o número e o peso do boi mais leve.
+
+    */
+    
     public static void main(String[] args) {
         // TODO code application logic here
     }

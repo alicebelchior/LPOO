@@ -22,8 +22,7 @@ public class revisao3 {
         int idade, maisVelho = 0, maisNovo = 1000, homem = 0, mulher = 0, somaIdades = 0, totalPessoas = 0;
         float mediaIdades = 0;
         
-        //Entrada de dados
-        
+        //Entrada de dados       
         while(!nome.equalsIgnoreCase("fim")){
             System.out.println("Digite um nome ou 'fim': ");
             nome = sc.next();
