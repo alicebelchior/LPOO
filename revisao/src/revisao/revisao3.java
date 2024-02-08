@@ -18,25 +18,52 @@ public class revisao3 {
         Scanner sc = new Scanner(System.in);
         
         //Variáveis
-        String nome, sexo, pessoaVelha, pessoaNova;
-        int idade, maisVelho, maisNovo, homem = 0, mulher = 0, somaIdades = 0, totalPessoas = 0;
+        String nome = "", sexo, pessoaVelha = "", pessoaNova = "";
+        int idade, maisVelho = 0, maisNovo = 1000, homem = 0, mulher = 0, somaIdades = 0, totalPessoas = 0;
         float mediaIdades = 0;
         
         //Entrada de dados
-        System.out.println("Digite um nome ou 'fim': ");
-        nome = sc.next();
-        while(nome.equalsIgnoreCase("fim")){
+        
+        while(!nome.equalsIgnoreCase("fim")){
+            System.out.println("Digite um nome ou 'fim': ");
+            nome = sc.next();
+            
+            //contagem de mulheres e homens, e o total de pessoas
             System.out.println("Digite o sexo da pessoa (f/m): ");
             sexo = sc.next();
-            System.out.println("Digite a idade da pessoa: ");
-            idade = sc.nextInt();
             
             if (sexo.equalsIgnoreCase("f")){
                 mulher++;
-            } else {
+            } else if(sexo.equalsIgnoreCase("m")) {
                 homem++;
             }
+            
+            totalPessoas++;
+            
+            //Mais velho, mais novo e a soma das idades
+            System.out.println("Digite a idade da pessoa: ");
+            idade = sc.nextInt();
+            
+            somaIdades += idade;
+     
+            if (idade > maisVelho){
+                maisVelho = idade;
+                pessoaVelha = nome;
+            } else {
+                maisNovo = idade;
+                pessoaNova = nome;
+            }
+            
         }
+        //média das idades
+        mediaIdades = somaIdades / totalPessoas;
+        
+        //Saída de dados
+        
+        System.out.printf("A pessoa mais velha é %s, com %d anos, e a mais nova é %s com %d anos.%n", pessoaVelha, maisVelho, pessoaNova, maisNovo);
+        System.out.printf("Existem %d mulheres e %d homens.%n", mulher, homem);
+        System.out.printf("Foram registradas %d pessoas", totalPessoas);
+        System.out.printf("A soma das idades é %d. A média, %.2f%n", somaIdades, mediaIdades);
     }
     
 }
