@@ -1,72 +1,43 @@
 package revisao;
+
 import java.util.Scanner;
+
 public class revisao2 {
     /*
-    Faça um programa que leia o nome, idade e sexo de várias pessoas até que o nome digitado seja “FIM” e informe:
-	O nome e a idade da pessoa mais velha;
-	O nome e a idade da pessoa mais nova;
-	Quantas pessoas eram do sexo masculino;
-	Quantas pessoas eram do sexo feminino; e
-	A quantidade de pessoas digitadas e a média de idade.
-
+    Faça um programa que leia 10 números e informe:
+	A soma destes números;
+	A média destes números;
+	O maior número; e
+	O menor número.
     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
-        //Declaração de variaveis
-        String [] nome = new String [50];
-        String [] sexo = new String [50];
-        int [] idade = new int [50];
-        int i = 0, mulher = 0, homem = 0, totalPessoas = 0, maisVelho = 0, maisNovo = 999, somaIdades = 0;
-        String pessoaVelha = null, pessoaNova  = null;
-        float mediaIdades = 0;
-       
-        // Começo da entrevista
-        while (i < 50) {
-            System.out.println("Digite seu nome: ");
-            nome[i] = sc.next();
+        //Variáveis
+        int [] numeros = new int [10];
+        int i, soma = 0, maior = 0, menor = 999999;
+        float media;
+        
+        //Entrada de dados
+        System.out.println("Digite 10 números: ");
+        for (i = 0; i < 10; i++){
+            numeros[i] = sc.nextInt();
             
-            // caso o usuario digite fim, o programa vai quebrar
-            if (nome[i].equalsIgnoreCase("FIM")){
-                break;
+            //Para cada entrada de dado, a soma vai aumentando
+            soma += numeros[i];
+            
+            //Definição do maior e menor numero
+            if(numeros[i] > maior){
+                maior = numeros[i];
             } else {
-                // começam as perguntas de verdade
-                System.out.println("Digite seu sexo (masculino/feminino): ");
-                sexo[i] = sc.next();
-                System.out.println("Digite sua idade: ");
-                idade[i] = sc.nextInt();   
-                i++;
-            }
-            // pessoa mais velha/ mais nova
-            if (idade[i] > maisVelho){
-                maisVelho = idade[i];
-                pessoaVelha = nome[i];
-            } else {
-                maisNovo = idade[i];
-                pessoaNova = nome[i];
-            }
-            
-            //idade total das pessoas
-            somaIdades += idade[i];
-            
-            //total de pessoas
-            totalPessoas +=1;
-            
-            // dos quais são de homens e mulheres
-            if (sexo[i].equalsIgnoreCase("masculino")){
-                homem += 1;
-            } else{
-                mulher += 1;
+                menor = numeros[i];
             }
         }
-        //media de idade
-        mediaIdades = somaIdades / idade.length;
+        //média dos numeros
+        media = soma / numeros.length;
         
-        System.out.printf("A pessoa mais velha é %s com %d anos%n", pessoaVelha, maisVelho);
-        System.out.printf("A pessoa mais nova é %s com %d anos%n", pessoaNova, maisNovo);
-        System.out.printf("A quantidade de homens é %d%n", homem);
-        System.out.printf("A quantidade de mulheres é %d%n", mulher);
-        System.out.printf("A quantidade de pessoas foi de %d, com uma média de idades de %.2f anos.%n", totalPessoas);
+        //Saída de dados
+        System.out.printf("O maior numero é %d e o menor, é %d%n", maior, menor);
+        System.out.printf("A soma dos números é %d e a média, %.2f%n", soma, media);
+        }
     }
-    
-}

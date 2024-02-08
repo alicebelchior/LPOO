@@ -20,12 +20,13 @@ public class revisao1 {
         float mediaIdades;
         int somaIdades = 0;
         int totalIdades = 0;
+        int idade;
         
         Scanner sc = new Scanner(System.in);     
         System.out.println("Digite as idades: ");  
                 
-        for (int i = 0; i < 10; i++){   
-            int idade = sc.nextInt();         
+        do {  
+            idade = sc.nextInt();         
             if(idade != 0){
                 somaIdades += idade;
                 totalIdades += 1;  
@@ -44,6 +45,8 @@ public class revisao1 {
                 menorIdade = idade;
             }
         }
+        while (idade != 0);
+        
         mediaIdades = somaIdades / totalIdades;
         
         System.out.printf("A maior idade é %d e a menor idade é %d%n", maiorIdade, menorIdade);
