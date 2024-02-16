@@ -18,16 +18,18 @@ public class revisao4 {
         Scanner sc = new Scanner(System.in);
         
         //Variáveis
-        int numero = 0, numBoiPesado = 0, numBoiLeve = 0, totalBoi = 0;
+        int numero = 1;
+        int numBoiPesado = 0, numBoiLeve = 0, totalBoi = 0;
         float pesoBoi = 0, pesoTotal = 0, mediaPeso = 0, boiPesado = 0, boiLeve = 10000000;
         
         //Entrada de dados
-        while(pesoBoi != 0){ //leitura encerra quando o número digitado for 0
-            System.out.println("Digite o número e o peso do boi (em arrobas):");
+        while(numero != 0){ //leitura encerra quando o número digitado for 0
+            System.out.println("Digite o número do boi: ");
             numero = sc.nextInt();
-            pesoBoi = sc.nextFloat();
-        
-            if(pesoBoi != 0){ //se não for digitado 0
+
+            if(numero != 0){ //se não for digitado 0
+                System.out.println("Agora, o seu peso (em arrobas): ");
+                pesoBoi = sc.nextFloat();
                 //para cada boi registrado, o peso total aumenta
                 pesoTotal += pesoBoi;
                 
@@ -46,7 +48,14 @@ public class revisao4 {
                 }
             }
         }
+        //média do peso dos bois
         mediaPeso = pesoTotal / totalBoi;
+
+        //saida de dados
+        System.out.printf("Foram digitados %d bois, somando um total de %.2f arrobas.%n", totalBoi, pesoTotal);
+        System.out.printf("A média desse peso foi de %.2f arrobas.%n", mediaPeso);
+        System.out.printf("O boi mais pesado foi o %d, com %.2f arrobas.%n", numBoiPesado, boiPesado);
+        System.out.printf("O boi mais leve foi o %d, com %.2f arrobas.%n", numBoiLeve, boiLeve);
     }
     
 }
