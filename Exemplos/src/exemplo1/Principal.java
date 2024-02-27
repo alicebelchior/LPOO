@@ -49,17 +49,7 @@ public class Principal {
         System.out.println(b.dados());
         System.out.println(c.dados());
         System.out.println(d.dados());
-        System.out.println();
-        
-        /*
-        ACRESCENTAR NA CLASSE "Pessoa" 2 ATRIBUTOS.
-        FAZER ALTERAÇÃO NO MÉTODO CONSTRUTOR PRA RECEBER NA CRIAÇÃO DO OBJETO OS DOIS ATRIBUTOS NOVOS.
-        CORRIGIR O MÉTODO "Dados" PARA QUE ELE USE OS NOVOS ATRIBUTOS.
-        CRIAR MAIS DOIS MÉTODOS USANDO OS ATRIBUTOS CRIADOS E, SE QUISER, OS QUE JÁ EXISTIAM.
-        CORRIGIR A CRIAÇÃO DE OBJETOS NA CLASSE PRINCIPAL.
-        USAR OS MÉTODOS CRIADOS NOS OBJETOS DA CLASSE PRINCIPAL.
-        */
-        
+        System.out.println();        
         
     }
     

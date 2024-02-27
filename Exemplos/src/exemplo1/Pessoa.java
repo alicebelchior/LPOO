@@ -5,20 +5,14 @@ public class Pessoa {
 
     //Atributo
     String nome;
-    String nacionalidade;
-    int idade;
-    float altura;
-    
+    int idade;  
 
     //Método "construtor"
-    Pessoa(String n, String nac, int i, float alt) {
+    Pessoa(String n, int i) {
         this.nome = n;
         this.idade = i;
-        this.nacionalidade = nac;
-        this.altura = alt;
     }
 
-    //Método de aniversario usando idade
     void aniversario() {
         this.idade++;
     }
