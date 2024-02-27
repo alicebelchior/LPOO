@@ -14,8 +14,11 @@ public class Pessoa {
     Pessoa(String n, String nac, int i, float alt) {
         this.nome = n;
         this.idade = i;
+        this.nacionalidade = nac;
+        this.altura = alt;
     }
 
+    //Método de aniversario usando idade
     void aniversario() {
         this.idade++;
     }
