@@ -16,17 +16,13 @@ public class revisao5 {
         Scanner sc = new Scanner(System.in);
 
         //variaveis
-        int i = 0, j = 0;
-        int[] vetOG = new int[10];
-        int [] vetOrg = new int[10];
+        int i = 0;
+        int [] vetor = new int[10];
         
-
         //entrada de dados
         System.out.println("Digite 10 números aleatórios: ");
         for ( i = 0; i < 10; i++) {
-            vetOG[i] = sc.nextInt();
-
-            int aux = vetOG[i];
+            vetor[i] = sc.nextInt();
         }
 
     }
