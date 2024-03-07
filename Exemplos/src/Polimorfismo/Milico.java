@@ -16,6 +16,6 @@ class Milico extends Pessoa {
 
     //Metodo vazio
     void mostrar() {
-        System.out.println(nome + " é um " + patente + " cuja idade é " + idade + " anos.");
+        System.out.println(nome + " é um " + patente + " cuja idade é " + idade + " anos. Ele aterrorisa a cidade de " + cidade);
     }
 }

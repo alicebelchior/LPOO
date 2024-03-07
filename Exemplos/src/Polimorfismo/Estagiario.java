@@ -15,6 +15,6 @@ class Estagiario extends Pessoa{
     }
     //metodo vazio
     void mostrar(){
-        System.out.println(nome + " é aluno de " + curso + " e estagia por ter um CR = " + coeficienteRendimento);
+        System.out.println(nome + " tem " + idade + " é aluno de " + curso + " e estagia por ter um CR = " + coeficienteRendimento);
     }
 }
