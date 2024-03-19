@@ -1,0 +1,4 @@
+Vodka; Russia; Forte
+Canha; Brasil; Forte
+Vinho; Egito; Medio
+Cerveja; Sumeria; Fraca
