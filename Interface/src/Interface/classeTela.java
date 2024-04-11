@@ -81,6 +81,17 @@ public class classeTela {
         caixa2.setForeground(Color.BLUE);
         tela2.add(caixa2);
 
+        //config do ícone
+        //icon1
+        Icon imagem = new ImageIcon("arquivo.jpg");
+        JButton btn = new JButton();
+        btn.setIcon(imagem);
+
+        JLabel rotulo = new JLabel();
+        rotulo.setIcon(imagem);
+
+        //icon2
+
         //saida de dados
         tela.setLayout(null); //layout vazio
         tela.setVisible(true); //função para tornar a janela visivel
