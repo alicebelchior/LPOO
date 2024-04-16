@@ -83,14 +83,12 @@ public class classeTela {
 
         //config do ícone
         //icon1
-        Icon imagem = new ImageIcon("arquivo.jpg");
-        JButton btn = new JButton();
+        Icon imagem = new ImageIcon("alice.jpg");
+        JButton btn = new JButton("alice.jpg");
         btn.setIcon(imagem);
-
-        JLabel rotulo = new JLabel();
-        rotulo.setIcon(imagem);
-
-        //icon2
+        btn.setBounds(300, 300, 100, 100);
+        tela.add(btn);
+        tela.revalidate();
 
         //saida de dados
         tela.setLayout(null); //layout vazio
