@@ -1,4 +1,4 @@
-package manipArq;
+package manipuladorArquivo;
 
 import java.io.*;
 

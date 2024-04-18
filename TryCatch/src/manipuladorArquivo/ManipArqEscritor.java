@@ -4,7 +4,7 @@ coloque um texto com 10 linhas.
 Deixe uma linha em branco entre cada linha escrita.
 Faça também um programa para poder ler este arquivo que está gravado na raiz da unidade C: do computador.
  */
-package manipArq;
+package manipuladorArquivo;
 
 import java.io.*;
 
