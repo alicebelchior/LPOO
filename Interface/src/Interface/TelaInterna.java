@@ -1,7 +1,6 @@
 package Interface;
 
 import javax.swing.*;
-import sun.audio.*;
 import java.awt.*;
 import java.awt.Event.*;
 import java.awt.event.*;
