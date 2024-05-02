@@ -1,10 +1,25 @@
-
 package tocador;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
 public class TocadorMusica {
 
     public static void main(String[] args) {
-        //https://docs.oracle.com/javase/8/docs/technotes/guides/sound/programmer_guide/chapter7.html#a114527
+        FileInputStream in;
+        try {
+            //Inicializa o FileInputStream com o endereço do arquivo para tocar
+            in = new FileInputStream("ladygaga.mp3");
+
+            //Cria uma instancia da classe player passando para ele o InpuStream do arquivo
+            Player p = new Player(in);
+
+            //executa o som
+            p.play();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (JavaLayerException e) {
+            e.printStackTrace();
+        }
     }
-    
 }
