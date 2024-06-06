@@ -24,7 +24,8 @@ public class JOPRevisao2 {
         for (int i = 0; i < 10; i++) {
             //enquanto o indice < 10, o array vai receber um numero
             //conversao de dados de entrada
-            numero[i] = Integer.parseInt(JOptionPane.showInputDialog("Digite dez números: ", JOptionPane.INFORMATION_MESSAGE));
+            numero[i] = Integer.parseInt(JOptionPane.showInputDialog("Digite dez números: ",
+                    JOptionPane.INFORMATION_MESSAGE));
 
             //soma das idades
             somaNumero += numero[i];
