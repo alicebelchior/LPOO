@@ -23,14 +23,17 @@ public class JOPRevisao3 {
         float mediaIdades = 0;
 
         //entrada de dados
-        while (!nome.equalsIgnoreCase("fim")) {
+        while (true) {
             //enquanto não for digitado fim, vai ler o codigo
             nome = JOptionPane.showInputDialog(null, "Digite um nome ou 'fim': ", "É menino ou menina?",
                     JOptionPane.INFORMATION_MESSAGE);
 
-            if (!nome.equalsIgnoreCase("fim")) {
+            if (nome.equalsIgnoreCase("fim")) {
+                break;
+            } else {
+
                 //se não for digitado fim, pede-se o sexo da pessoa
-                sexo = JOptionPane.showInputDialog(null, "Digite o sexo da" + nome, "Quero nomes!", JOptionPane.INFORMATION_MESSAGE);
+                sexo = JOptionPane.showInputDialog(null, "Digite o sexo ('f' ou 'm') da " + nome, "Quero nomes!", JOptionPane.INFORMATION_MESSAGE);
 
                 //TOTAL DE PESSOAS
                 totalPessoas++;
@@ -44,18 +47,18 @@ public class JOPRevisao3 {
                     System.out.println("Ou é homem ou é mulher, para de besteira!");
                     break;
                 }
-                
+
                 //entrada de dados de idades
-                String digiteIdade = JOptionPane.showInputDialog(null, "Digite a idade de" + nome, "Agora quero idades!", JOptionPane.INFORMATION_MESSAGE);
+                String digiteIdade = JOptionPane.showInputDialog(null, "Digite a idade de " + nome, "Agora quero idades!", JOptionPane.INFORMATION_MESSAGE);
                 idade = Integer.parseInt(digiteIdade);
-                
+
                 //mais velho
-                if (idade > maisVelho){
+                if (idade > maisVelho) {
                     maisVelho = idade;
                     pessoaVelha = nome;
                 }
                 //mais novo
-                if (idade < maisNovo){
+                if (idade < maisNovo) {
                     maisNovo = idade;
                     pessoaNova = nome;
                 }
@@ -65,13 +68,17 @@ public class JOPRevisao3 {
         }
         //media das idades
         mediaIdades = somaIdades / totalPessoas;
-        
+
         //saida de dados
-        JOptionPane.showMessageDialog(null, pessoaVelha + " é a pesoa mais velha, com " + maisVelho + " anos");
-        JOptionPane.showMessageDialog(null, pessoaNova + " é a pesoa mais nova, com " + maisNovo + " anos");
-        JOptionPane.showMessageDialog(null, "Existem " + (mulher) + " mulheres e " + (homem) " homens.");
-        JOptionPane.showMessageDialog(null, "Foram digitadas " + totalPessoas + " pessoas e a média de idades foi de " + mediaIdades + " anos");
-        
+        String resultadoFinal = "Pessoa mais velha: " + pessoaVelha + ", idade: " + maisVelho + "\n" +
+                "Pessoa mais nova: " + pessoaNova + ", idade: " + maisNovo + "\n" +
+                "Total de pessoas do sexo masculino: " + homem + "\n" +
+                "Total de pessoas do sexo feminino: " + mulher + "\n" +
+                "Total de pessoas digitadas: " + totalPessoas + "\n" +
+                "Média de idade: " + mediaIdades;
+
+        JOptionPane.showMessageDialog(null, resultadoFinal);
+
     }
 
 }
