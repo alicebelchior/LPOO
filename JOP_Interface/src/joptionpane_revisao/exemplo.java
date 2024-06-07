@@ -3,8 +3,8 @@ package joptionpane_revisao;
 import javax.swing.*;
 import java.awt.*;
 
-public class JOPRevisao4 {
-
+public class exemplo {
+//Por "Error parsing file", a atividade de revisão 4 foi renomeado para exemplo
     /*
     Faça um programa que leia o número e o peso de um boi, a leitura encerra quando o número digitado for 0 (zero) e informe:
 	Quantos bois foram digitados;
@@ -17,7 +17,7 @@ public class JOPRevisao4 {
         //variaveis
         int numBoiPesado = 0, numBoiLeve = 0, totalBoi = 0;
         float pesoBoi = 0, pesoTotal = 0, mediaPeso = 0;
-        float boiPesado = Float.MIN_VALUE, boiLeve = Float.MAX_VALUE; 
+        float boiPesado = Float.MIN_VALUE, boiLeve = Float.MAX_VALUE;
         int numeroBoi;
 
         do {
@@ -27,10 +27,10 @@ public class JOPRevisao4 {
             numeroBoi = Integer.parseInt(numero);
 
             if (numeroBoi != 0) {
-                String peso = JOptionPane.showInputDialog(null,"Agora, o seu peso (em arrobas): ", "Balança de boi",
+                String peso = JOptionPane.showInputDialog(null, "Agora, o seu peso (em arrobas): ", "Balança de boi",
                         JOptionPane.INFORMATION_MESSAGE);
                 pesoBoi = Float.parseFloat(peso);
-                
+
                 //para cada boi registrado, o peso total aumenta
                 pesoTotal += pesoBoi;
 
@@ -50,15 +50,17 @@ public class JOPRevisao4 {
                 }
             }
         } while (numeroBoi != 0);
-        
+
         //média do peso dos bois
         mediaPeso = pesoTotal / totalBoi;
-        
+
         //saida de resultados
-        String resultado = "Quantidade de bois digitados: " + totalBoi + ", somando: " + pesoTotal + " arrobas.\n" +
-                "A média do peso dos bois foi de " + mediaPeso + " arrobas.\n" +
-                "O boi mais pesado foi o  " + numBoiPesado + " com "+ boiPesado + " arrobas.\n" +
-                "O boi mais leve foi o  " + numBoiLeve + " com "+ boiLeve + " arrobas.\n";
-        
+        String resultado = "Quantidade de bois digitados: " + totalBoi + ", somando: " + pesoTotal + " arrobas.\n"
+                + "A média do peso dos bois foi de " + mediaPeso + " arrobas.\n"
+                + "O boi mais pesado foi o  " + numBoiPesado + " com " + boiPesado + " arrobas.\n"
+                + "O boi mais leve foi o  " + numBoiLeve + " com " + boiLeve + " arrobas.\n";
+
         JOptionPane.showMessageDialog(null, resultado);
     }
+
+}
