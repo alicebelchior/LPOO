@@ -3,8 +3,8 @@ package joptionpane_revisao;
 import javax.swing.*;
 import java.awt.*;
 
-public class exemplo {
-//Por "Error parsing file", a atividade de revisão 4 foi renomeado para exemplo
+public class rev4 {
+//Por "Error parsing file", a atividade de revisão 4 foi renomeado para rev4
     /*
     Faça um programa que leia o número e o peso de um boi, a leitura encerra quando o número digitado for 0 (zero) e informe:
 	Quantos bois foram digitados;
