@@ -9,6 +9,8 @@ public class JTPRevisão {
 
         //criação do frame
         JFrame tela = new JFrame("Revisão em paineis");
+        
+        //criação do jtabbedpane para abas
         JTabbedPane tabs = new JTabbedPane(JTabbedPane.TOP);
         tela.setBounds(100, 100, 900, 700);
         tabs.setBounds(10, 10, 870, 640);
@@ -37,6 +39,8 @@ public class JTPRevisão {
         //tornanado a tela visivel 
         tela.add(tabs);
         tela.setLayout(null);
+        
+        //operação de sair e "quebrar" o programa qnd fechar a tela
         tela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         tela.setVisible(true);
     }
